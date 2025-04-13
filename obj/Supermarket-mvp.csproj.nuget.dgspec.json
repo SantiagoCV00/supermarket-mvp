@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 3\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
+    "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 9\\Supermarket-mvp_v4\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 3\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj": {
+    "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 9\\Supermarket-mvp_v4\\Supermarket-mvp\\Supermarket-mvp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 3\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "projectUniqueName": "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 9\\Supermarket-mvp_v4\\Supermarket-mvp\\Supermarket-mvp.csproj",
         "projectName": "Supermarket-mvp",
-        "projectPath": "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 3\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "projectPath": "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 9\\Supermarket-mvp_v4\\Supermarket-mvp\\Supermarket-mvp.csproj",
         "packagesPath": "C:\\Users\\crj58\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 3\\Supermarket-mvp\\Supermarket-mvp\\obj\\",
+        "outputPath": "C:\\Users\\crj58\\Documents\\CECEP\\4TO SEMESTRE\\LENGUAJE INFORMATICO\\SEMANA 9\\Supermarket-mvp_v4\\Supermarket-mvp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

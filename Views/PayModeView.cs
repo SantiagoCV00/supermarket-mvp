@@ -42,6 +42,56 @@ namespace Supermarket_mvp.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
+
+            // Asigna el evento Click del botón BtnNew para invocar el evento AddNewEvent
+            BtnNew.Click += delegate { 
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+
+                tabControl1.TabPages.Remove(tabPagePayModeList);
+                tabControl1.TabPages.Add(tabPagePayModeDetail);
+                tabPagePayModeDetail.Text = "Add New Pay Mode"; // Cambia el titulo de la
+                                                                // pestaña
+            };
+
+            BtnEdit.Click += delegate { 
+                EditEvent?.Invoke(this, EventArgs.Empty);
+
+                tabControl1.TabPages.Remove(tabPagePayModeList);
+                tabControl1.TabPages.Add(tabPagePayModeDetail);
+                tabPagePayModeDetail.Text = "Edit Pay Mode"; // Cambia el título de la
+                                                              // pestaña
+
+
+            };
+            BtnDelete.Click += delegate {
+                var result = MessageBox.Show(
+                    "Are you sure you want to delete the selected Pay Mode",
+                    "Warning",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+            };
+
+            BtnSave.Click += delegate { 
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+
+                if (isSuccessful) // SI grabar fue exitoso
+                {
+                    tabControl1.TabPages.Remove(tabPagePayModeDetail);
+                    tabControl1.TabPages.Add(tabPagePayModeList);
+                }
+                MessageBox.Show(Message);
+            };
+            BtnCancel.Click += delegate { 
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+
+                tabControl1.TabPages.Remove(tabPagePayModeDetail);
+                tabControl1.TabPages.Add(tabPagePayModeList);
+            };
         }
 
         public string PayModelId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -162,9 +212,10 @@ namespace Supermarket_mvp.Views
 
         public bool IsEdit
         {
-            get { return isEdit; }
-            set { isEdit = value; }
+            get { return IsEdit; }
+            set { IsEdit = value; }
         }
+
 
         public bool IsSuccessful
         {
@@ -177,6 +228,8 @@ namespace Supermarket_mvp.Views
             get { return message; }
             set { message = value; }
         }
+
+
 
         private void ShowPayModeView(object? sender, EventArgs e)
         {
